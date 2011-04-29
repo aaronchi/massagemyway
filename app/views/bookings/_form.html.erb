@@ -1,0 +1,27 @@
+<p>
+<strong>
+This is where some information would go about doing something with the form.
+</strong>
+</p>
+<% form_for @booking, :url => { :action => "create" }, :html => { :method => :post } do |f| %>
+  <p>
+    <%= f.label "Name" %>
+    <%= f.text_field :sender_name, :class => "input" %>
+  </p>
+  <p>
+    <%= f.label "Email" %>
+    <%= f.text_field :email, :class => "input" %>
+  </p>
+  <p>
+    <%= f.label "Type" %>
+    <%= f.select :support_type, options_for_select(["Bug", "Ask", "Idea"]) %>
+  </p>
+  <p>
+    <%= f.label "Details" %>
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>
+<div class="under"></div>

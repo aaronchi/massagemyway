@@ -1,5 +1,6 @@
 Massagemyway::Application.routes.draw do
   
+  resources :bookings, :only => [:new, :create]
   match 'about' => 'pages#about', :as => :about
   match 'services' => 'pages#services', :as => :services
   match 'booking' => 'pages#booking', :as => :booking

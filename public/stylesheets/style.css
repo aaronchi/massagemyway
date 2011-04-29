@@ -124,6 +124,35 @@ footer strong{ color:#4f4f4f; font-weight:normal}
 #ContactForm .input { float:right;width:166px; height:16px; border:1px solid #d9d8d8; background:#fff; padding:3px 5px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
 #ContactForm textarea { overflow: auto; float:right;width:244px; height:90px; border:1px solid #d9d8d8; background:#fff; padding:3px 5px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
 
+#new_booking { line-height:14px;}
+#new_booking  p{ padding-bottom:23px; overflow:hidden;}
+#new_booking  a{ margin-left:20px; float:right; margin-top:10px;}
+#new_booking  .input { float:right;width:166px; height:16px; border:1px solid #d9d8d8; background:#fff; padding:3px 5px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+#new_booking  textarea { overflow: auto; float:right;width:244px; height:90px; border:1px solid #d9d8d8; background:#fff; padding:3px 5px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
 
 .col_1{ width:306px; float:left;}
 .col_2{ width:385px; float:left; padding-left:40px;}
+
+
+/* =========================== modal ============================== */
+#modal {
+    background-color:#fff;
+    display:none;
+    width:620px;
+    text-align:left;
+    border:2px solid #d7d7d7;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-box-shadow: 0 0 50px #ccc;
+    -webkit-box-shadow: 0 0 50px #ccc;
+}
+#modal h2 {
+  background: url(../images/bg.jpg) repeat;
+  border-bottom:2px solid #e7e6e1;
+  padding: 16px 40px;
+  -moz-border-radius:10px 10px 0 0;
+  -webkit-border-radius:10px 10px 0 0;
+}
+#modal section {
+  padding:20px 40px;
+}

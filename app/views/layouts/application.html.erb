@@ -3,7 +3,7 @@
   <head>
     <title>Massage My Way: LA's Premier Mobile Massage</title>
     <%= stylesheet_link_tag :all %>
-    <%= javascript_include_tag :defaults %>
+    <%= javascript_include_tag :defaults, "jquery.tools.js" %>
     <!--[if lt IE 9]>
     <script type="text/javascript" src="/javascripts/html5.js"></script>
     <![endif]-->
@@ -22,7 +22,7 @@
               <strong>Massage My Way</strong> - LA's Premier Mobile Massage
             </span>
             <span class="right">
-              <strong>Book Online</strong> or
+              <a href="/bookings/new" rel="modal"><strong>Book Online</strong></a> or
               <strong>Call: (310) 309-7814</strong>
             </span>
           </div>
@@ -94,7 +94,7 @@
           </span>
         </div>
       </footer>
-      <!--footer end-->
+      <!--footer end-->   
     </div>
   </body>
 </html>
