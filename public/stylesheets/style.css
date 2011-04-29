@@ -143,8 +143,8 @@ footer strong{ color:#4f4f4f; font-weight:normal}
     border:2px solid #d7d7d7;
     -moz-border-radius:10px;
     -webkit-border-radius:10px;
-    -moz-box-shadow: 0 0 50px #ccc;
-    -webkit-box-shadow: 0 0 50px #ccc;
+    -moz-box-shadow: 0 0 20px #444;
+    -webkit-box-shadow: 0 0 20px #444;
 }
 #modal h2 {
   background: url(../images/bg.jpg) repeat;
