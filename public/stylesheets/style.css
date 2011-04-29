@@ -1,0 +1,129 @@
+/* fonts */
+@font-face {
+    font-family: 'HattoriHanzoLight';
+    src: url('../fonts/hattori_hanzo-webfont.eot');
+    src: url('../fonts/hattori_hanzo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/hattori_hanzo-webfont.woff') format('woff'),
+         url('../fonts/hattori_hanzo-webfont.ttf') format('truetype'),
+         url('../fonts/hattori_hanzo-webfont.svg#HattoriHanzoLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Getting the new tags to behave */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video{ display: block; }
+mark, rp, rt, ruby, summary, time{ display: inline }
+
+/* Left & Right alignment */
+small {font-size:12px;}
+.left { float:left;}
+.right { float:right;}
+.wrapper {width:100%; overflow:hidden;}
+
+/* Global properties ======================================================== */
+
+body{ background: url(../images/bg.jpg) repeat; border:0; font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#8c8c8c; line-height:20px;}
+
+/* Global Structure ============================================================= */
+
+.main {	margin: 0 auto;	width: 841px; padding:0 3px; }
+
+.body1{ background:url(../images/bg_top.jpg) 50% -68px no-repeat}
+/* ============================= main layout ====================== */
+
+a{ color:#1d1d1d; text-decoration: underline; outline:none}
+a:hover{ text-decoration: none}
+
+h1,h2,h3,h4,#menu li a {font-family: 'HattoriHanzoLight', Arial, Helvetica, sans-serif;font-weight:normal;}
+
+h1{ float:left; padding:14px 0 0 1px;}
+h2, h3{ font-size:16px; text-transform:uppercase; color:#444545; line-height:20px; padding: 19px 0 17px 0;}
+h2 span{ color:#ee8504}
+h3{ border-bottom:1px solid #e7e6e1; color:#ee8504; margin-bottom:13px; padding:5px 0 16px 0}
+h4 {font-size:18px;color:#ee8504;float:left;padding:0;text-align:bottom;line-height:14px;padding-right:6px;}
+
+p{ padding-bottom:20px;}
+
+/* ============================= header ====================== */
+header {position:relative;color:#9c9c9c; font:13px Arial, Helvetica, sans-serif;line-height:43px;}
+header .wrapper {height:35px;}
+header strong {color: #4f4f4f; font-weight:normal;}
+#logo{ position:absolute; background:url(../images/logo.png) no-repeat; width:280px; height:215px; top:80px; left:-65px;text-indent:-5000px;}
+#slogan{ display:none;}
+
+#search{ float:right; padding:47px 2px 0 0}
+#search .submit{ float:right; background:url(../images/search_button.gif) no-repeat; width:56px; height:22px; cursor:pointer; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#fff;}
+#search .bg{ float:right; padding-right:5px; background:url(../images/search_input.gif) no-repeat;}
+#search .input{ font:13px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#5b5b5b; height:16px; width:164px; padding:3px 5px; background:none;}
+
+#menu { width:100%; overflow:hidden; padding-top:9px; height:44px;}
+#menu li { float:left; padding-right:12px;}
+#menu .no_pad{ padding-right:0}
+#menu .no_pad a{ padding:0 19px;}
+#menu li a{ display:block; font-size:15px; color:#444444; text-transform:uppercase; text-decoration:none; line-height:44px; padding:0 23px;}
+#menu li a:hover, #menu .selected a{ color:#fff; background:url(../images/menu_bg_active.gif) top repeat-x}
+
+/* ============================= content ====================== */
+
+#content{ padding-top:15px;}
+
+.box_top_left{ margin-left:-3px; padding-left:3px; background:url(../images/box_top_left.png) top left no-repeat; line-height:0; font-size:0;}
+.box_top_right{ margin-right:-3px; padding-right:3px; background:url(../images/box_top_right.png) top right no-repeat}
+.box_top{ background:url(../images/box_top.png) top repeat-x; width:100%; height:3px; overflow:hidden}
+
+.box_left{ margin-left:-3px; background:url(../images/box_left.png) left repeat-y;}
+.box_right{ margin-right:-3px;background:url(../images/box_right.png) right repeat-y;}
+.box{ background:#fff; overflow:hidden; margin:0 3px;}
+
+.box_bot_left{ margin-left:-3px; padding-left:3px; background:url(../images/box_bot_left.png) bottom left no-repeat; line-height:0; font-size:0;}
+.box_bot_right{ margin-right:-3px; padding-right:3px; background:url(../images/box_bot_right.png) bottom right no-repeat }
+.box_bot{ background:url(../images/box_bot.png) bottom repeat-x; width:100%; height:3px; overflow:hidden}
+
+.box2{ background:#f3f2ed; color:#777777; line-height:16px;}
+.box2_top_left{ background:url(../images/box2_top_left.gif) top left no-repeat}
+.box2_top_right{ background:url(../images/box2_top_right.gif) top right no-repeat}
+.box2_bot_left{ background:url(../images/box2_bot_left.gif) bottom left no-repeat}
+.box2_bot_right{ background:url(../images/box2_bot_right.gif) bottom right no-repeat}
+.box2 .pad{ padding:6px;}
+.box2 img{ padding-bottom:3px;}
+
+.promo{ color:#444; background: #f3f2ed; border:2px solid #e7e6e1; padding:10px; font-size:14px; text-align:center;margin-bottom:16px;}
+
+.pad{ padding:10px 55px 16px}
+.marg_right1{ margin-right:20px;}
+.pad_bot1{ padding-bottom:20px;}
+.pad_left1{ padding-left:50px;}
+
+.under{ margin:0 -30px; padding:0 30px; height:3px; font-size:0; line-height:0; background:#f3f2ed;}
+
+#welcome{ position:relative; width:100%;}
+#welcome h2{ font-size:28px; line-height:33px; color:#4a4a4a; padding:19px 0 16px 0; height:68px;}
+#welcome img{ position:absolute; right:-30px; top:-1px;}
+
+.link1{ font-size:12px;}
+
+.list1 li{ line-height:25px;}
+.list1 li a{ text-decoration:none;color:#8c8c8c; padding-left:21px; background:url(../images/marker_1.gif) 0 7px no-repeat} 
+
+.color1{ color:#8c8c8c}
+
+/* ============================= footer ====================== */
+
+footer { padding:29px 21px 35px 21px; line-height:18px; color:#9c9c9c; font:12px Arial, Helvetica, sans-serif;}
+footer a{ color:#9c9c9c}
+footer strong{ color:#4f4f4f; font-weight:normal}
+
+#icons{ float: left; padding-left:12px;}
+#icons li{ float:left; padding-left:6px}
+
+/* ============================= forms ============================= */
+
+#ContactForm{ line-height:14px;}
+#ContactForm p{ padding-bottom:23px;}
+#ContactForm a{ margin-left:20px; float:right; margin-top:10px;}
+#ContactForm .input { float:right;width:166px; height:16px; border:1px solid #d9d8d8; background:#fff; padding:3px 5px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+#ContactForm textarea { overflow: auto; float:right;width:244px; height:90px; border:1px solid #d9d8d8; background:#fff; padding:3px 5px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+
+
+.col_1{ width:306px; float:left;}
+.col_2{ width:385px; float:left; padding-left:40px;}

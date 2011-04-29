@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Massage My Way: LA's Premier Mobile Massage</title>
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag :defaults %>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/javascripts/html5.js"></script>
+    <![endif]-->
+    <%= csrf_meta_tag %>
+  </head>
+  <body id="page1">
+    <div class="body1">
+      <div class="main">
+        <!--header -->
+        <header>
+          <a href="/" id="logo">
+          <h1>Massage My Way</h1>
+          </a>
+          <div class="wrapper">
+            <span class="left">
+              <strong>Massage My Way</strong> - LA's Premier Mobile Massage
+            </span>
+            <span class="right">
+              <strong>Book Online</strong> or
+              <strong>Call: (310) 309-7814</strong>
+            </span>
+          </div>
+          <nav>
+            <%= render_navigation %>
+          </nav>
+          <%= image_tag "header_#{params[:action]}.jpg" %>
+        </header>
+      </div>
+    </div>
+    <div class="main">
+      <!--header end-->
+      <!--content -->
+      <section id="content">
+        <div class="box_top_left">
+          <div class="box_top_right">
+            <div class="box_top">
+            </div>
+          </div>
+        </div>
+        <div class="box_left">
+          <div class="box_right">
+            <div class="box">
+              <div class="pad">
+                <%= yield %>
+              </div>
+            </div>
+          </div>
+          <div class="box_bot_left">
+            <div class="box_bot_right">
+              <div class="box_bot">
+              </div>
+            </div>
+          </div>
+      </section>
+      <!--content end-->
+      <!--footer -->
+      <footer>
+        <div class="wrapper">
+          <span class="left">
+            &nbsp;&copy; 2010
+            <strong>Massage My Way</strong><!-- &nbsp;|&nbsp;
+            <a href="/policy/">Our Policies</a>-->
+          </span>
+          <ul id="icons">
+            <li>
+              <a href="#">
+              <img src="/images/icon1.jpg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+              <img src="/images/icon2.jpg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+              <img src="/images/icon3.jpg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="#">
+              <img src="/images/icon4.jpg" alt="">
+              </a>
+            </li>
+          </ul>
+          <span class="right">
+            <!-- {%FOOTER_LINK} -->
+          </span>
+        </div>
+      </footer>
+      <!--footer end-->
+    </div>
+  </body>
+</html>
