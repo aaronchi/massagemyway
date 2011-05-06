@@ -5,7 +5,7 @@ class Notifier < ActionMailer::Base
     mail(
       :to => "service@massagemyway.com",
       :from => booking.email,
-      :subject => "New #{booking.support_type}"
+      :subject => "[MassageMyWay] Booking for #{booking.name}"
     )
   end
   

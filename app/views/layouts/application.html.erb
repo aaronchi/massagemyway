@@ -9,8 +9,8 @@
     <![endif]-->
     <%= csrf_meta_tag %>
   </head>
-  <body id="page1">
-    <div class="body1">
+  <body>
+    <div class="body <%= params[:action] %>">
       <div class="main">
         <!--header -->
         <header>
@@ -29,7 +29,9 @@
           <nav>
             <%= render_navigation %>
           </nav>
+          <div class="banner">
           <%= image_tag "header_#{params[:action]}.jpg" %>
+          </div>
         </header>
       </div>
     </div>
@@ -67,6 +69,7 @@
             <strong>Massage My Way</strong><!-- &nbsp;|&nbsp;
             <a href="/policy/">Our Policies</a>-->
           </span>
+<!--
           <ul id="icons">
             <li>
               <a href="#">
@@ -89,6 +92,7 @@
               </a>
             </li>
           </ul>
+-->
           <span class="right">
             <!-- {%FOOTER_LINK} -->
           </span>

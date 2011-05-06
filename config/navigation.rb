@@ -31,7 +31,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :about, 'About Us', about_path
     primary.item :services, 'Menu Of Services', services_path
     primary.item :booking, 'Booking With Us', booking_path
-    primary.item :therapists, 'Our Therapists', therapists_path
+    #primary.item :therapists, 'Our Therapists', therapists_path
     primary.item :contact, 'Contact Us', contact_path, :class => 'no_pad'
     # you can also specify a css id or class to attach to this particular level
     # works for all levels of the menu

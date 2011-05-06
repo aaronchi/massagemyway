@@ -1,7 +1,7 @@
 /**
  * Unobtrusive scripting adapter for jQuery
  *
- * Requires jQuery 1.4.3 or later.
+ * Requires jQuery 1.4.4 or later.
  * https://github.com/rails/jquery-ujs
 
  * Uploading file using rails.js
@@ -44,12 +44,10 @@
  */
 
 (function($) {
-
   // Shorthand to make it a little easier to call public rails functions from within rails.js
   var rails;
 
   $.rails = rails = {
-
     // Link elements bound by jquery-ujs
     linkClickSelector: 'a[data-confirm], a[data-method], a[data-remote]',
 

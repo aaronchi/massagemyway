@@ -26,9 +26,12 @@ body{ background: url(../images/bg.jpg) repeat; border:0; font:14px "Trebuchet M
 
 /* Global Structure ============================================================= */
 
-.main {	margin: 0 auto;	width: 841px; padding:0 3px; }
+.main {	margin: 0 auto;	width: 841px; padding:0 3px;}
 
-.body1{ background:url(../images/bg_top.jpg) 50% -68px no-repeat}
+.body { background:url(../images/bg_top2.jpg) 50% -68px no-repeat}
+.banner {height:220px;overflow:hidden;}
+.body.index {background:url(../images/bg_top.jpg) 50% -68px no-repeat}
+.body.index .banner {height:auto;}
 /* ============================= main layout ====================== */
 
 a{ color:#1d1d1d; text-decoration: underline; outline:none}
@@ -48,7 +51,7 @@ p{ padding-bottom:20px;}
 header {position:relative;color:#9c9c9c; font:13px Arial, Helvetica, sans-serif;line-height:43px;}
 header .wrapper {height:35px;}
 header strong {color: #4f4f4f; font-weight:normal;}
-#logo{ position:absolute; background:url(../images/logo.png) no-repeat; width:280px; height:215px; top:80px; left:-65px;text-indent:-5000px;}
+#logo{ position:absolute; z-index:10;background:url(../images/logo.png) no-repeat; width:280px; height:215px; top:80px; left:-65px;text-indent:-5000px;}
 #slogan{ display:none;}
 
 #search{ float:right; padding:47px 2px 0 0}
@@ -79,7 +82,8 @@ header strong {color: #4f4f4f; font-weight:normal;}
 .box_bot_right{ margin-right:-3px; padding-right:3px; background:url(../images/box_bot_right.png) bottom right no-repeat }
 .box_bot{ background:url(../images/box_bot.png) bottom repeat-x; width:100%; height:3px; overflow:hidden}
 
-.box2{ background:#f3f2ed; color:#777777; line-height:16px;}
+.box2{ background:#f3f2ed; color:#777777; line-height:16px; -moz-border-radius:6px;-webkit-border-radius:6px;text-align:center;}
+.box2 .photo {width:118px;overflow:hidden;margin-bottom:6px;}
 .box2_top_left{ background:url(../images/box2_top_left.gif) top left no-repeat}
 .box2_top_right{ background:url(../images/box2_top_right.gif) top right no-repeat}
 .box2_bot_left{ background:url(../images/box2_bot_left.gif) bottom left no-repeat}
@@ -91,8 +95,22 @@ header strong {color: #4f4f4f; font-weight:normal;}
 
 .pad{ padding:10px 55px 16px}
 .marg_right1{ margin-right:20px;}
+.marg_left1{ margin-left:20px;}
 .pad_bot1{ padding-bottom:20px;}
 .pad_left1{ padding-left:50px;}
+
+.border {
+  background:#F3F2ED;
+  padding:6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius:6px;
+  border-radius:6px;
+}
+
+figure {}
+.photo {position:relative;display:block}
+.overlay {position:absolute;top:0;left:0;background:url(/images/photos/overlay.png) no-repeat 0 0;width:118px;height:112px;}
+.overlay-large {background:url(/images/photos/overlay-large.png) no-repeat 0 0;width:168px;height:112px;}
 
 .under{ margin:0 -30px; padding:0 30px; height:3px; font-size:0; line-height:0; background:#f3f2ed;}
 
@@ -125,10 +143,9 @@ footer strong{ color:#4f4f4f; font-weight:normal}
 #ContactForm textarea { overflow: auto; float:right;width:244px; height:90px; border:1px solid #d9d8d8; background:#fff; padding:3px 5px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
 
 #new_booking { line-height:14px;}
-#new_booking  p{ padding-bottom:23px; overflow:hidden;}
-#new_booking  a{ margin-left:20px; float:right; margin-top:10px;}
-#new_booking  .input { float:right;width:166px; height:16px; border:1px solid #d9d8d8; background:#fff; padding:3px 5px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
-#new_booking  textarea { overflow: auto; float:right;width:244px; height:90px; border:1px solid #d9d8d8; background:#fff; padding:3px 5px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+#new_booking  div.input{ padding-bottom:23px; overflow:hidden;clear both;}
+#new_booking  div.input input { float:right;width:250px; border:1px solid #d9d8d8; background:#fff; padding:5px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+#new_booking  textarea { overflow: auto; float:right;width:250px; height:90px; border:1px solid #d9d8d8; background:#fff; padding:5px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
 
 .col_1{ width:306px; float:left;}
 .col_2{ width:385px; float:left; padding-left:40px;}
@@ -138,7 +155,7 @@ footer strong{ color:#4f4f4f; font-weight:normal}
 #modal {
     background-color:#fff;
     display:none;
-    width:620px;
+    width:520px;
     text-align:left;
     border:2px solid #d7d7d7;
     -moz-border-radius:10px;
