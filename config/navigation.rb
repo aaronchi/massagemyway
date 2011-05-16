@@ -28,7 +28,7 @@ SimpleNavigation::Configuration.run do |navigation|
   # Define the primary navigation
   navigation.items do |primary|
     primary.item :home, 'Home', root_path
-    primary.item :about, 'About Us', about_path
+    #primary.item :about, 'About Us', about_path
     primary.item :services, 'Menu Of Services', services_path
     primary.item :booking, 'Booking With Us', booking_path
     #primary.item :therapists, 'Our Therapists', therapists_path

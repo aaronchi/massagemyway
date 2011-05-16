@@ -6,6 +6,9 @@ gem 'simple-navigation'
 gem 'simple_form'
 gem 'jrails'
 gem 'inherited_resources'
+gem 'compass'
+  gem 'compass-susy-plugin'
+  gem 'fancy-buttons'
 
 # Development
 group :development do

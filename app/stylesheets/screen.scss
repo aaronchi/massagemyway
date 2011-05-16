@@ -1,0 +1,215 @@
+// Imports -------------------------------------------------------------------
+
+@import 'compass';
+@import "compass/reset";
+@import "base";
+@import "fancy-buttons";
+
+/* Fonts ------------------------------------------------------------------*/
+@font-face {
+    font-family: 'HattoriHanzoLight';
+    src: url('../fonts/hattori_hanzo-webfont.eot');
+    src: url('../fonts/hattori_hanzo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/hattori_hanzo-webfont.woff') format('woff'),
+         url('../fonts/hattori_hanzo-webfont.ttf') format('truetype'),
+         url('../fonts/hattori_hanzo-webfont.svg#HattoriHanzoLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Base ------------------------------------------------------------------*/
+
+body {
+  background: url(/images/bg.jpg) repeat;
+  border:0;
+  font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#8c8c8c;
+  line-height:20px;
+}
+
+a{ color:#1d1d1d; text-decoration: underline; outline:none}
+a:hover{ text-decoration: none}
+
+a.button {
+  @include fancy-button(#F08604);
+  font-weight:normal;
+  &.big {font-size:21px;line-height:36px;}
+}
+
+h1,h2,h3,h4,#menu li a {font-family: 'HattoriHanzoLight', Arial, Helvetica, sans-serif;font-weight:normal;}
+
+h1{ float:left; padding:14px 0 0 1px;}
+h2, h3{ font-size:16px; text-transform:uppercase; color:#444545; line-height:20px; padding: 15px 0 17px 0;}
+h2 span{ color:#ee8504}
+h3{ border-bottom:1px solid #e7e6e1; color:#ee8504; margin-bottom:10px; padding:0 0 10px 0}
+h4 {font-size:18px;font-weight:normal;color:#ee8504;float:left;padding:0;text-align:bottom;line-height:14px;padding-right:6px;}
+
+p{ padding-bottom:20px;}
+strong {font-weight:bold;}
+strong.title {font-size:18px;color:#ee8504;font-weight:normal;}
+small {font-size:12px;}
+.left { float:left;}
+.right { float:right;}
+.wrapper {width:100%; overflow:hidden;}
+.clearfix {@include pie-clearfix;}
+.under{ margin: 0 -15px; padding:0 30px; height:3px; font-size:0; line-height:0; background:#f3f2ed;}
+.pad-bot {margin-bottom:14px;}
+.pad-top {margin-top:14px;}
+.align-right {text-align:right;}
+.large {color:#666;font-size:22px;}
+em {font-style:italic;}
+/* Layout ------------------------------------------------------------------*/
+#body {
+  background:url(/images/bg_header.jpg) 50% -68px no-repeat
+}
+#page {
+  @include container;
+  /*@include susy-grid-background;*/
+  margin: auto;
+}
+
+header {position:relative;color:#9c9c9c; font:13px Arial, Helvetica, sans-serif;line-height:43px;}
+header .wrapper {height:35px; .left {margin-left:120px;strong{display:none;}}}
+header strong {color: #4f4f4f; font-weight:normal;}
+#logo{ position:absolute; z-index:10;background:url(/images/logo.png) no-repeat; width:195px; height:150px; top:2px; left:-35px;text-indent:-5000px;}
+
+#menu { float:right;overflow:hidden; padding-top:9px; height:44px;}
+#menu li { float:left; padding-right:6px;}
+#menu .no_pad{ padding-right:0}
+#menu .no_pad a{ padding:0 19px;}
+#menu li a{ display:block; font-size:15px; color:#444444; text-transform:uppercase; text-decoration:none; line-height:44px; padding:0 18px;}
+#menu li a:hover, #menu .selected a{ color:#fff; background:url(/images/menu_bg_active.gif) top repeat-x}
+
+.box_top_left{ margin-left:-3px; padding-left:3px; background:url(../images/box_top_left.png) top left no-repeat; line-height:0; font-size:0;}
+.box_top_right{ margin-right:-3px; padding-right:3px; background:url(../images/box_top_right.png) top right no-repeat}
+.box_top{ background:url(../images/box_top.png) top repeat-x; width:100%; height:3px; overflow:hidden}
+
+.box_left{ margin-left:-3px; background:url(../images/box_left.png) left repeat-y;}
+.box_right{ margin-right:-3px;background:url(../images/box_right.png) right repeat-y;}
+.box{ background:#fff; overflow:hidden; margin:0 3px;}
+
+.box_bot_left{ margin-left:-3px; padding-left:3px; background:url(../images/box_bot_left.png) bottom left no-repeat; line-height:0; font-size:0;}
+.box_bot_right{ margin-right:-3px; padding-right:3px; background:url(../images/box_bot_right.png) bottom right no-repeat }
+.box_bot{ background:url(../images/box_bot.png) bottom repeat-x; width:100%; height:3px; overflow:hidden}
+
+
+.photo {position:relative;display:block}
+.overlay {position:absolute;top:0;left:0;background:url(/images/photos/overlay.png) no-repeat 0 0;width:435px;height:244px;}
+.overlay-tall {background:url(/images/photos/overlay-tall.png) no-repeat 0 0;width:140px;height:249px;}
+
+div.promo {
+  font-family: HattoriHanzoLight;
+  font-size:16px;color:#666;
+  background: #F3F2ED;
+  @include border-radius(6px);
+  padding: 15px;
+  text-align:center;
+}
+
+figure img {display:block;}
+figure.border {
+  background: #F3F2ED;
+    @include border-radius(6px);
+    padding: 6px;
+    }
+    figure.left {margin-right:15px;}
+.banner {
+  figure {
+    @include columns(7,12);
+  }
+  .col {
+    @include columns(5,12);
+    @include omega(12);
+    article {
+      font-family: HattoriHanzoLight;
+      font-size:16px;color:#666;
+      background: #F3F2ED;
+      @include border-radius(6px);
+      padding: 14px 14px 0 14px;
+    }
+  }
+}
+
+#content{ padding-top:15px;}
+#content .pad {
+  padding:30px 0;
+  @include full;
+}
+
+.layout.seven-five {
+  margin-top:14px;
+  figure{
+    float:left;
+    margin-right:14px;
+    }
+  div.col {
+    .entry {margin-left:164px;}
+    &.first {
+      @include columns(7,12);
+      }
+    &.second {
+      @include columns(5,12);
+      @include omega(12);
+    }
+  }
+}
+
+.layout.half {
+  div.col {
+    &.first {
+      @include columns(6,12);
+      }
+    &.second {
+      @include columns(6,12);
+      @include omega(12);
+    }
+  }
+}
+
+.layout.fourths {
+  .first {
+    @include columns(3,12);
+  }
+  .second {
+    @include columns(6,12);
+  }
+  .fourth {
+    @include columns(3,12);
+    @include omega(12);
+  }
+}
+
+#welcome{ position:relative; width:100%;}
+#welcome h2{ font-size:28px; line-height:33px; color:#4a4a4a; padding:19px 0 16px 0; height:68px;}
+#welcome img{ position:absolute; right:0px; top:-1px;}
+
+footer { @include full; padding:20px 0; line-height:18px; color:#9c9c9c; font:12px Arial, Helvetica, sans-serif;}
+footer a{ color:#9c9c9c}
+footer strong{ color:#4f4f4f; font-weight:normal}
+
+/* Modal ------------------------------------------------------------------*/
+#modal {
+    background-color:#fff;
+    display:none;
+    width:520px;
+    text-align:left;
+    border:2px solid #d7d7d7;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-box-shadow: 0 0 20px #444;
+    -webkit-box-shadow: 0 0 20px #444;
+}
+#modal h2 {
+  background: url(../images/bg.jpg) repeat;
+  border-bottom:2px solid #e7e6e1;
+  padding: 16px 40px;
+  -moz-border-radius:10px 10px 0 0;
+  -webkit-border-radius:10px 10px 0 0;
+}
+#modal section {
+  padding:20px 40px;
+}
+
+
+#new_booking { line-height:14px;}
+#new_booking  div.input{ padding-bottom:23px; overflow:hidden;clear:both;}
+#new_booking  div.input input { float:right;width:250px; border:1px solid #d9d8d8; background:#fff; padding:5px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+#new_booking  textarea { overflow: auto; float:right;width:250px; height:90px; border:1px solid #d9d8d8; background:#fff; padding:5px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}

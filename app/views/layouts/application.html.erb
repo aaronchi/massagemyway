@@ -2,17 +2,13 @@
 <html>
   <head>
     <title>Massage My Way: LA's Premier Mobile Massage</title>
-    <%= stylesheet_link_tag :all %>
+    <%= stylesheet_link_tag 'screen' %>
     <%= javascript_include_tag :defaults, "jquery.tools.js" %>
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="/javascripts/html5.js"></script>
-    <![endif]-->
     <%= csrf_meta_tag %>
   </head>
   <body>
-    <div class="body <%= params[:action] %>">
-      <div class="main">
-        <!--header -->
+    <div id="body">
+      <div id="page">
         <header>
           <a href="/" id="logo">
           <h1>Massage My Way</h1>
@@ -26,79 +22,44 @@
               <strong>Call: (310) 309-7814</strong>
             </span>
           </div>
-          <nav>
+          <nav class="clearfix">
             <%= render_navigation %>
           </nav>
-          <div class="banner">
-          <%= image_tag "header_#{params[:action]}.jpg" %>
-          </div>
         </header>
-      </div>
-    </div>
-    <div class="main">
-      <!--header end-->
-      <!--content -->
-      <section id="content">
-        <div class="box_top_left">
-          <div class="box_top_right">
-            <div class="box_top">
+        
+        <div class="main">
+          <div id="content">
+
+            <div class="box_top_left">
+              <div class="box_top_right">
+                <div class="box_top">
+                </div>
+              </div>
             </div>
-          </div>
+            <div class="box_left">
+              <div class="box_right">
+                <div class="box">
+                  <div class="pad">
+                    <%= yield %>
+                  </div>
+                </div>
+              </div>
+              <div class="box_bot_left">
+                <div class="box_bot_right">
+                  <div class="box_bot">
+                  </div>
+                </div>
+              </div>
+          </section>
         </div>
-        <div class="box_left">
-          <div class="box_right">
-            <div class="box">
-              <div class="pad">
-                <%= yield %>
-              </div>
-            </div>
-          </div>
-          <div class="box_bot_left">
-            <div class="box_bot_right">
-              <div class="box_bot">
-              </div>
-            </div>
-          </div>
-      </section>
-      <!--content end-->
-      <!--footer -->
-      <footer>
-        <div class="wrapper">
+        <footer class="clearfix">
           <span class="left">
-            &nbsp;&copy; 2010
+            &copy; 2010
             <strong>Massage My Way</strong><!-- &nbsp;|&nbsp;
             <a href="/policy/">Our Policies</a>-->
           </span>
-<!--
-          <ul id="icons">
-            <li>
-              <a href="#">
-              <img src="/images/icon1.jpg" alt="">
-              </a>
-            </li>
-            <li>
-              <a href="#">
-              <img src="/images/icon2.jpg" alt="">
-              </a>
-            </li>
-            <li>
-              <a href="#">
-              <img src="/images/icon3.jpg" alt="">
-              </a>
-            </li>
-            <li>
-              <a href="#">
-              <img src="/images/icon4.jpg" alt="">
-              </a>
-            </li>
-          </ul>
--->
-          <span class="right">
-            <!-- {%FOOTER_LINK} -->
-          </span>
-        </div>
-      </footer>
-      <!--footer end-->   
+        </footer>
+      </div>
     </div>
   </body>
 </html>
