@@ -4,10 +4,18 @@ require 'fancy-buttons'
 # Require any additional compass plugins here.
 
 project_type = :rails
+project_path = Compass::AppIntegration::Rails.root
+environment = Compass::AppIntegration::Rails.env
+
+FileUtils.mkdir_p(Rails.root.join("tmp", "stylesheets"))
+Rails.configuration.middleware.insert_before('Rack::Sendfile', 'Rack::Static',
+    :urls => ['/stylesheets'],
+    :root => "#{Rails.root}/tmp")
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-
+css_dir   = 'tmp/stylesheets'
+sass_dir  = 'app/stylesheets'
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
 
