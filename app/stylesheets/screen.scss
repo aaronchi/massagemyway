@@ -187,15 +187,19 @@ footer strong{ color:#4f4f4f; font-weight:normal}
 
 /* Modal ------------------------------------------------------------------*/
 #modal {
-    background-color:#fff;
-    display:none;
-    width:520px;
-    text-align:left;
-    border:2px solid #d7d7d7;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    -moz-box-shadow: 0 0 20px #444;
-    -webkit-box-shadow: 0 0 20px #444;
+  background-color:#fff;
+  display:none;
+  width:520px;
+  text-align:left;
+  border:2px solid #d7d7d7;
+  @include border-radius(10px);
+  @include single-box-shadow(#444, 0, 0, 20px);
+  .close {
+    cursor:pointer;
+    display:block;width:30px;height:30px;
+    background: url(/images/close.png);
+    top:-14px;right:-14px;position:absolute;
+  }
 }
 #modal h2 {
   background: url(../images/bg.jpg) repeat;

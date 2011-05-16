@@ -739,11 +739,28 @@ footer strong {
   border: 2px solid #d7d7d7;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  -moz-box-shadow: 0 0 20px #444;
-  -webkit-box-shadow: 0 0 20px #444;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 20px #444444;
+  -webkit-box-shadow: 0 0 20px #444444;
+  -o-box-shadow: 0 0 20px #444444;
+  box-shadow: 0 0 20px #444444;
+}
+/* line 197, ../../app/stylesheets/screen.scss */
+#modal .close {
+  cursor: pointer;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(/images/close.png);
+  top: -14px;
+  right: -14px;
+  position: absolute;
 }
 
-/* line 200, ../../app/stylesheets/screen.scss */
+/* line 204, ../../app/stylesheets/screen.scss */
 #modal h2 {
   background: url(../images/bg.jpg) repeat;
   border-bottom: 2px solid #e7e6e1;
@@ -752,24 +769,24 @@ footer strong {
   -webkit-border-radius: 10px 10px 0 0;
 }
 
-/* line 207, ../../app/stylesheets/screen.scss */
+/* line 211, ../../app/stylesheets/screen.scss */
 #modal section {
   padding: 20px 40px;
 }
 
-/* line 212, ../../app/stylesheets/screen.scss */
+/* line 216, ../../app/stylesheets/screen.scss */
 #new_booking {
   line-height: 14px;
 }
 
-/* line 213, ../../app/stylesheets/screen.scss */
+/* line 217, ../../app/stylesheets/screen.scss */
 #new_booking div.input {
   padding-bottom: 23px;
   overflow: hidden;
   clear: both;
 }
 
-/* line 214, ../../app/stylesheets/screen.scss */
+/* line 218, ../../app/stylesheets/screen.scss */
 #new_booking div.input input {
   float: right;
   width: 250px;
@@ -781,7 +798,7 @@ footer strong {
   font: 13px "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
-/* line 215, ../../app/stylesheets/screen.scss */
+/* line 219, ../../app/stylesheets/screen.scss */
 #new_booking textarea {
   overflow: auto;
   float: right;
