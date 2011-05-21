@@ -24,7 +24,7 @@ body {
   font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;
   line-height:20px;
 }
-
+.small {font-size:12px;}
 a{ color:#1d1d1d; text-decoration: underline; outline:none}
 a:hover{ text-decoration: none}
 
@@ -189,7 +189,7 @@ div.promo {
 #modal {
   background-color:#fff;
   display:none;
-  width:520px;
+  width:540px;
   text-align:left;
   border:2px solid #d7d7d7;
   @include border-radius(10px);
@@ -213,7 +213,14 @@ div.promo {
 }
 
 
-#new_booking { line-height:14px;}
-#new_booking  div.input{ padding-bottom:23px; overflow:hidden;clear:both;}
-#new_booking  div.input input { float:right;width:250px; border:1px solid #d9d8d8; background:#fff; padding:5px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
-#new_booking  textarea { overflow: auto; float:right;width:250px; height:90px; border:1px solid #d9d8d8; background:#fff; padding:5px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+#new_booking { 
+line-height:14px;
+  div.input { padding-bottom:12px; overflow:hidden;clear:both;
+    &.string input, &.radio div { float:right;width:250px; margin-bottom:13px;color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+    &.string input {border:1px solid #d9d8d8; background:#fff; padding:5px;}
+    &.radio div {width:262px;}
+    &.radio div label {margin-right:10px;}
+    textarea { margin-left:6px;overflow: auto; float:right;width:250px; height:75px; border:1px solid #d9d8d8; background:#fff; padding:5px; color:#8c8c8c; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+    .hint {display:block;color:#999;font-size:12px;margin-top:10px;margin-right:10px;}
+  }
+}

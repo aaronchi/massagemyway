@@ -1,9 +1,9 @@
 class Booking
   include ActiveModel::Validations
 
-  validates_presence_of :name, :email, :phone, :details 
+  validates_presence_of :name, :email, :phone
   # to deal with form, you must have an id attribute
-  attr_accessor :id, :name, :email, :phone, :details
+  attr_accessor :id, :name, :email, :phone, :therapist, :details
 
   def initialize(attributes = {})
     attributes.each do |key, value|
