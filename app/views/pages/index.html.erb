@@ -3,14 +3,19 @@
     <%= image_tag "photos/intro_massage.jpg" %>
   </div>
   <div class="col">
-  <article class="pad-bot">
+  <div class="article pad-bot">
     <p>
-      <strong class="title">Massage My Way</strong> was created to give people access to on site and on demand massage therapy keeping in mind these key elements -  providing the highest quality massage and keeping it affordable.
+      <strong class="title">Massage My Way</strong> was created to give people
+access to on site and on demand massage therapy
+of the very highest quality - affordably.
     </p>
     <p>
-      Choose from a variety of massage modalities to address your specific needs or request your own.
+      Choose from a variety of
+massage modalities to address your specific needs<br>
+<%= link_to "View Our Services »", booking_path %>
     </p>
-  </article>
+
+  </div>
   <div class="align-right">
     <%= link_to "Book Online Now", new_booking_path, :class => "button big", :rel =>"modal" %>
   <div class="pad-top"><em>or call</em> <span class="large">(310) 309-7814</span></div>
@@ -41,12 +46,10 @@
     <div class="entry">
       <h3>Quality Therapists</h3>
       <p>
-        We only employ the best and brightest
-        therapists in the trade and provide
-        ongoing training to make sure they stay
-        at the top of the field.
-      </p> 
-      <%= link_to "View our Services »", services_path %>
+        All our therapists are state licensed
+professionals and many of them have
+worked for the top spas in Los Angeles.
+      </p>
     </div>
   </div>
   <div class="col second">
@@ -59,9 +62,8 @@
     <div class="entry">
       <h3>Affordable</h3>
       <p>
-        Take advantage of our low price
-        offerings or choose from one of
-        our package deals.
+        Click below to see some of our
+sweet deals.
       </p>
       <%= link_to "View Pricing & Packages »", booking_path %>
     </div>
