@@ -66,9 +66,9 @@ em {font-style:italic;}
   margin: auto;
 }
 
-header {position:relative;color:#9c9c9c; font:13px Arial, Helvetica, sans-serif;line-height:43px;}
-header .wrapper {height:35px; .left {margin-left:120px;strong{display:none;}}}
-header strong {color: #4f4f4f; font-weight:normal;}
+#header {position:relative;color:#9c9c9c; font:13px Arial, Helvetica, sans-serif;line-height:43px;}
+#header .wrapper {height:35px; .left {margin-left:120px;strong{display:none;}}}
+#header strong {color: #4f4f4f; font-weight:normal;}
 #logo{ position:absolute; z-index:10;background:url(/images/logo.png) no-repeat; width:195px; height:150px; top:2px; left:-35px;text-indent:-5000px;}
 
 #menu { float:right;overflow:hidden; padding-top:9px; height:44px;}
@@ -104,15 +104,15 @@ div.promo {
   text-align:center;
 }
 
-figure img {display:block;}
-figure.border {
+.figure img {display:block;}
+.figure.border {
   background: #F3F2ED;
     @include border-radius(6px);
     padding: 6px;
     }
-    figure.left {margin-right:15px;}
+    .figure.left {margin-right:15px;}
 .banner {
-  figure {
+  .figure {
     @include columns(7,12);
   }
   .col {
@@ -136,7 +136,7 @@ figure.border {
 
 .layout.seven-five {
   margin-top:14px;
-  figure{
+  .figure{
     float:left;
     margin-right:14px;
     }
@@ -181,9 +181,9 @@ figure.border {
 #welcome h2{ font-size:28px; line-height:33px; color:#4a4a4a; padding:19px 0 16px 0; height:68px;}
 #welcome img{ position:absolute; right:0px; top:-1px;}
 
-footer { @include full; padding:20px 0; line-height:18px; color:#9c9c9c; font:12px Arial, Helvetica, sans-serif;}
-footer a{ color:#9c9c9c}
-footer strong{ color:#4f4f4f; font-weight:normal}
+#footer { @include full; padding:20px 0; line-height:18px; color:#9c9c9c; font:12px Arial, Helvetica, sans-serif;}
+#footer a{ color:#9c9c9c}
+#footer strong{ color:#4f4f4f; font-weight:normal}
 
 /* Modal ------------------------------------------------------------------*/
 #modal {
